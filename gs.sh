@@ -1,4 +1,5 @@
 #!/bin/bash
+# Git status with not-pushed commits
 echo ''
 echo -e "\033[32m# STATUS\033[0m"
 git status
