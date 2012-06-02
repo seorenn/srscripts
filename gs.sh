@@ -1,5 +1,9 @@
 #!/bin/bash
 # Git status with not-pushed commits
+if ! git ls-files >& /dev/null; then
+    echo "NOT GIT REPOSITORY. SKIP."
+    exit -1
+fi
 echo ''
 echo -e "\033[32m# STATUS\033[0m"
 git status
