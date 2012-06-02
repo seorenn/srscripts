@@ -3,11 +3,11 @@ if ! git ls-files >& /dev/null; then
     echo "NOT GIT REPOSITORY. SKIP."
     exit -1
 fi
-echo ''
-echo -ne "\033[32mCOMMIT MESSAGE: \033[0m"
 cmdopt=$1
 lenopt=${#cmdopt}
 if [ "$lenopt" -lt "1" ]; then
+    echo ''
+    echo -ne "\033[32mCOMMIT MESSAGE: \033[0m"
     read commit_message
     len=${#commit_message}
     if [ "$len" -lt "1" ]; then
