@@ -8,6 +8,9 @@ echo ''
 echo -e "\033[32m# STATUS\033[0m"
 git status
 echo ''
+echo -e "\033[32m# FETCHED LOG\033[0m"
+git log master..origin --oneline
+echo ''
 if [[ `git remote` ]]; then
     echo -e "\033[32m# UNPUSHED COMMITS\033[0m"
     git log origin/master..HEAD --oneline
