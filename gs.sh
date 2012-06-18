@@ -9,10 +9,10 @@ echo -e "\033[32m# STATUS\033[0m"
 git status
 echo ''
 echo -e "\033[32m# FETCHED LOG\033[0m"
-git log master..origin/master --pretty=oneline --abbrev-commit --decorate -n 4
+git log master..origin/master --pretty=oneline --graph --abbrev-commit --decorate -n 4
 echo ''
 if [[ `git remote` ]]; then
     echo -e "\033[32m# UNPUSHED COMMITS\033[0m"
-    git log origin/master..HEAD --pretty=oneline --abbrev-commit --decorate -n 4
+    git log origin/master..HEAD --pretty=oneline --graph --abbrev-commit --decorate -n 4
     echo ''
 fi
