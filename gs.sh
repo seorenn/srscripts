@@ -12,7 +12,7 @@ git status
 echo ''
 if [[ $GIT_REMOTES ]]; then
     echo -e "\033[32m# FETCHED LOG WITH origin/master\033[0m"
-    git log master..origin/master --pretty=oneline --graph --abbrev-commit --decorate -n 4
+    git log HEAD..origin/master --pretty=oneline --graph --abbrev-commit --decorate -n 4
     echo ''
 fi
 if [[ `git remote` ]]; then
