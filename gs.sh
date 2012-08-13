@@ -16,7 +16,8 @@ if [[ $GIT_REMOTES ]]; then
     echo ''
 fi
 if [[ `git remote` ]]; then
-    echo -e "\033[32m# UNPUSHED COMMITS TO origin/master\033[0m"
-    git log origin/master..HEAD --pretty=oneline --graph --abbrev-commit --decorate -n 4
+    echo -e "\033[32m# UNPUSHED COMMITS OF ALL LOCAL BRANCHES\033[0m"
+    #git log origin/master..HEAD --pretty=oneline --graph --abbrev-commit --decorate -n 4
+    git log --pretty=oneline --graph --abbrev-commit --decorate -n 4 --branches --not --remotes
     echo ''
 fi
