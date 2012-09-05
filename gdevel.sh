@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git checkout devel
+git checkout develop
